@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { lazy, Suspense, useEffect } from "react";
+import "./styles/styles.css";
+import Loader from "./components/loader/loader";
+import Video from "./components/video/video";
+import Features from "./components/features/features";import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-function App() {
+const Header = lazy(() => import("./components/header/header"));
+const Hadit =  lazy(()=> import("./components/hadit/hadit"));
+const Welcom = lazy(()=> import("./components/welcom/welcom"));
+const Services = lazy(()=> import("./components/services/services"));
+
+const App = () => {
+  useEffect(()=> {
+    AOS.init()
+  }
+  ,[]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={<Loader />}>
+      <Header />
+      <Hadit />
+      <Welcom />
+      <div className="bg-pr">
+        <Services />
+        <Video />
+      </div>
+      <Features />
+    </Suspense>
   );
 }
 

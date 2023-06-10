@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:root {
+    --main-clr: #6BA549;
+    --dark-bl: #1E1E1E;
+    --light-bl: #414141;
+    --dark-main-clr: #376D18;
+    --white-clr: #fff;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--white-clr);
+    font-family: "Almarai", sans-serif;
+    direction: rtl;
+}
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--white-clr);
+}
+body::-webkit-scrollbar-thumb {
+    width: 5px;
+    background-color: var(--main-clr);
+    border: .7mm solid var(--white-clr);
+    border-radius: 1em;
+}
+.main-width {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (min-width: 1000px) {
+    .main-width {
+        width: 90%;
+    }
+}
+/* =============Header============= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .75em;
+    margin-bottom: 1.5em;
+}
+@media screen and (max-width: 300px) {
+    header {
+        flex-wrap: wrap;
+    }
+    header >div:first-child {
+        margin-bottom: 1em;
+    }
+}
+header h1 {
+    font-size: 20px;
+    color: var(--main-clr);
+    line-height: 2.25;
+}
+header p {
+    color: var(--dark-bl);
+    font-size: 14px;
+}
+header a[role="button"] {
+    font-size: 14px;
+    display: block;
+    width: max-content;
+    text-decoration: none;
+    color: var(--white-clr);
+    background-color: var(--main-clr);
+    padding: .75em 1.25em;
+    border-radius: 1em;
+    border: .75mm solid var(--main-clr);
+    font-weight: 700;
+    transition: all .5s linear;
+}
+header a[role="button"]:hover {
+    background-color: var(--white-clr);
+    color: var(--main-clr);
+}
+/* =============Hadit============= */
+.hadit img {
+    width: 100%;
+}
+.hadit .cover-bg {
+    background-image: url("../assets/hadit/hadit-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 250px;
+    position: relative;
+}
+.hadit .hadit-text {
+    position: absolute;
+    top: 2.5em;
+    left: 50%;transform: translateX(-50%);
+    text-align: center;
+    opacity: 0;
+    transition: all 400ms linear 500ms;
+}
+.hadit .hadit-text-show {
+    opacity: 1;
+}
+@media screen and (min-width: 400px) {
+    .hadit .cover-bg {
+        height: 300px;
+    }
+    .hadit .hadit-text {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@media screen and (min-width: 460px) {
+    .hadit .cover-bg {
+        height: 350px;
+    }
+}
+@media screen and (min-width: 550px) {
+    .hadit .cover-bg {
+        height: 400px;
+    }
+}
+.hadit .hadit-text >div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-clr);
+}
+.hadit .hadit-text span {
+    font-size: 20px;
+}
+.hadit .hadit-text #symbol {
+    font-size: 60px;
+    margin: 0 10px;
+}
+.hadit .hadit-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--dark-main-clr);
+}
+@media screen and (min-width: 500px) {
+    .hadit .hadit-text p {
+        width: 400px;
+        margin: auto;
+    }
+}
+@media screen and (min-width: 600px) {
+    .hadit .cover-bg {
+        height: 450px;
+    }
+    .hadit .hadit-text span {
+        font-size: 24px;
+    }
+    .hadit .hadit-text #symbol {
+        font-size: 70px;
+    }
+    .hadit .hadit-text p {
+        font-size: 22px;
+        width: 500px;
+    }
+}
+@media screen and (min-width: 750px) {
+    .hadit .cover-bg {
+        height: 490px;
+    }
+}
+@media screen and (min-width: 900px) {
+    .hadit .cover-bg {
+        height: 600px;
+    }
+    .hadit .hadit-text span {
+        font-size: 28px;
+    }
+    .hadit .hadit-text #symbol {
+        font-size: 100px;
+    }
+    .hadit .hadit-text p {
+        font-size: 24px;
+        width: 600px;
+    }
+    header a[role="button"] {
+        font-size: 16px;
+    }
+}
+/* =============Welcom============= */
+.welcom-tartile {
+    margin: 3em auto;
+    color: var(--light-bl);
+}
+.welcom-tartile h2 {
+    position: relative;
+    width: fit-content;
+    margin: 10px auto 35px auto;
+}
+.welcom-tartile h2::after {
+    content:"";
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    transform: translateX(-50%);
+    width: 2em;
+    height: 1mm;
+    background-color: var(--main-clr);
+    transition: width .5s linear;
+}
+.welcom-tartile h2:hover::after {
+    width: 100%;
+}
+.welcom-tartile p {
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 700;
+    text-align: center;
+}
+@media screen and (min-width: 750px) {
+    .welcom-tartile h2 {
+        font-size: 25px;
+    }
+    .welcom-tartile p {
+        font-size: 22px;
+    }
+}
+/* =============Services============= */
+.my-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 1em;
+}
+.services {
+    margin: 2.5em auto;
+}
+.services div {
+    display: flex;
+    align-items: center;
+    color: var(--main-clr);
+}
+.services div span {
+    font-size: 20px;
+    line-height: 1.5;
+}
+.services div span svg {
+    width: 28px;
+    height: 28px;
+}
+.services div span:first-child {
+    margin-left: 10px;
+}
+@media screen and (min-width: 500px) {
+    .my-grid {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5em;
+        row-gap: 1.5em;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .my-grid {
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        column-gap: 1em;
+        row-gap: 1em;
+    }
+    .services {
+        display: flex;
+        justify-content: center;
+    }
+    .services >div {
+        margin: 0 20px;
+    }
+}
+/* =============Video============= */
+.tartile-video {
+    margin: 2.5em auto;
+}
+.tartile-video video{
+    width: 100%;
+    border-radius: 1em;
+    margin: 25px auto;
+}
+.tartile-video a[role="button"] {
+    background-color: var(--main-clr);
+    border: .7mm solid var(--main-clr);
+    text-decoration: none;
+    color: var(--white-clr);
+    font-weight: 700;
+    display: block;
+    width: 50%;
+    margin: 10px auto;
+    text-align: center;
+    border-radius: 1em;
+    padding: 15px 30px;
+}
+.tartile-video a[role="button"]:hover {
+    background-color: var(--white-clr);
+    color: var(--main-clr);
+}
+@media screen and (min-width: 750px) {
+    .tartile-video video {
+        display: block;
+        width: 600px;
+    }
+}
+.bg-pr {
+    background-color: #f5f5f5;
+    padding: 2.5em 0;
+}
+/* =============Features============= */
+.features {
+    margin: 2.5em auto;
+    text-align: center;
+}
+.features >div {
+    border-bottom: 1px solid var(--main-clr);
+    padding: 18px 0;
+}
+.features svg {
+    width: 28px;
+    height: 28px;
+    margin: 12px 0;
+    color: var(--main-clr);
+}
+.features h3 {
+    font-size: 20px;
+    color: var(--light-bl);
+}
+.features p {
+    color: #757575;
+    margin-top: 10px;
+    line-height: 1.7;
+}

@@ -88,7 +88,7 @@ header a[role="button"]:hover {
     width: 100%;
 }
 .hadit .cover-bg {
-    background-image: url("../assets/hadit/hadit-bg.jpg");
+    background-image: url("../assets/hadit/hadit-bg.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

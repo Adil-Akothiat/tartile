@@ -1,4 +1,5 @@
 import React from "react";
+import "./features.css";
 import { RiFilePaper2Fill } from "react-icons/ri";
 import { RiTeamFill } from "react-icons/ri";
 import { HiStatusOnline } from "react-icons/hi";

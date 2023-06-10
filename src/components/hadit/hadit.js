@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
+import "./hadit.css";
 
 const Hadit = ()=> {
-    useEffect(()=>{
-        document.querySelector(".hadit-text").classList.add("hadit-text-show");
-    }, [])
     return (
         <div className="hadit">
             <div className="cover-bg">

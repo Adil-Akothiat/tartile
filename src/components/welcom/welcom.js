@@ -1,4 +1,5 @@
 import React from "react";
+import "./welcom.css";
 
 const Welcom = ()=> {
     return (

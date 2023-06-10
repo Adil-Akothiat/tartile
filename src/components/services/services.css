@@ -1,0 +1,19 @@
+.services {
+    margin: 2.5em auto;
+}
+.services div {
+    display: flex;
+    align-items: center;
+    color: var(--main-clr);
+}
+.services div span {
+    font-size: 20px;
+    line-height: 1.5;
+}
+.services div span svg {
+    width: 28px;
+    height: 28px;
+}
+.services div span:first-child {
+    margin-left: 10px;
+}

@@ -1,0 +1,98 @@
+.hadit img {
+    width: 100%;
+}
+.hadit .cover-bg {
+    background-image: url("../../assets/hadit/hadit-bg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 250px;
+    position: relative;
+}
+.hadit .hadit-text {
+    position: absolute;
+    top: 2.5em;
+    left: 50%;transform: translateX(-50%);
+    text-align: center;
+}
+@media screen and (min-width: 400px) {
+    .hadit .cover-bg {
+        height: 300px;
+    }
+    .hadit .hadit-text {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@media screen and (min-width: 460px) {
+    .hadit .cover-bg {
+        height: 350px;
+    }
+}
+@media screen and (min-width: 550px) {
+    .hadit .cover-bg {
+        height: 400px;
+    }
+}
+.hadit .hadit-text >div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-clr);
+}
+.hadit .hadit-text span {
+    font-size: 20px;
+}
+.hadit .hadit-text #symbol {
+    font-size: 60px;
+    margin: 0 10px;
+}
+.hadit .hadit-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--dark-main-clr);
+}
+@media screen and (min-width: 500px) {
+    .hadit .hadit-text p {
+        width: 400px;
+        margin: auto;
+    }
+}
+@media screen and (min-width: 600px) {
+    .hadit .cover-bg {
+        height: 450px;
+    }
+    .hadit .hadit-text span {
+        font-size: 24px;
+    }
+    .hadit .hadit-text #symbol {
+        font-size: 70px;
+    }
+    .hadit .hadit-text p {
+        font-size: 22px;
+        width: 500px;
+    }
+}
+@media screen and (min-width: 750px) {
+    .hadit .cover-bg {
+        height: 490px;
+    }
+}
+@media screen and (min-width: 900px) {
+    .hadit .cover-bg {
+        height: 600px;
+    }
+    .hadit .hadit-text span {
+        font-size: 28px;
+    }
+    .hadit .hadit-text #symbol {
+        font-size: 100px;
+    }
+    .hadit .hadit-text p {
+        font-size: 24px;
+        width: 600px;
+    }
+    header a[role="button"] {
+        font-size: 16px;
+    }
+}

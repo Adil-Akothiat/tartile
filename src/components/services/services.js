@@ -1,4 +1,5 @@
 import React from "react";
+import "./services.css"
 import { AiFillCheckCircle } from "react-icons/ai";
 
 const Services = ()=> {

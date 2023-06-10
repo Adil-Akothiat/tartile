@@ -1,0 +1,31 @@
+.tartile-video {
+    margin: 2.5em auto;
+}
+.tartile-video video{
+    width: 100%;
+    border-radius: 1em;
+    margin: 25px auto;
+}
+.tartile-video a[role="button"] {
+    background-color: var(--main-clr);
+    border: .7mm solid var(--main-clr);
+    text-decoration: none;
+    color: var(--white-clr);
+    font-weight: 700;
+    display: block;
+    width: 50%;
+    margin: 10px auto;
+    text-align: center;
+    border-radius: 1em;
+    padding: 15px 30px;
+}
+.tartile-video a[role="button"]:hover {
+    background-color: var(--white-clr);
+    color: var(--main-clr);
+}
+@media screen and (min-width: 750px) {
+    .tartile-video video {
+        display: block;
+        width: 600px;
+    }
+}

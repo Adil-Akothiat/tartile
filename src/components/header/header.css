@@ -1,0 +1,41 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .75em;
+    margin-bottom: 1.5em;
+}
+@media screen and (max-width: 300px) {
+    header {
+        flex-wrap: wrap;
+    }
+    header >div:first-child {
+        margin-bottom: 1em;
+    }
+}
+header h1 {
+    font-size: 20px;
+    color: var(--main-clr);
+    line-height: 2.25;
+}
+header p {
+    color: var(--dark-bl);
+    font-size: 14px;
+}
+header a[role="button"] {
+    font-size: 14px;
+    display: block;
+    width: max-content;
+    text-decoration: none;
+    color: var(--white-clr);
+    background-color: var(--main-clr);
+    padding: .75em 1.25em;
+    border-radius: 1em;
+    border: .75mm solid var(--main-clr);
+    font-weight: 700;
+    transition: all .5s linear;
+}
+header a[role="button"]:hover {
+    background-color: var(--white-clr);
+    color: var(--main-clr);
+}

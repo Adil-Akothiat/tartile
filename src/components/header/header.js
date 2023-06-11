@@ -1,6 +1,5 @@
 import React from "react";
 import "./header.css";
-import { Link } from "react-router-dom";
 
 const Header = ()=> {
     return (
@@ -10,7 +9,7 @@ const Header = ()=> {
                 <p>طريقك إلى التلاوة الصحيحة</p>
             </div>
             <div>
-                <Link to="/contact" role="button">تواصل معنا</Link>
+                <a href="#contact" role="button">تواصل معنا</a>
             </div>
         </header>
     );

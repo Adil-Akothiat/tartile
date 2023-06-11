@@ -43,6 +43,7 @@ const Form = ()=> {
                 <option id="default" value="">المستوى</option>
                 <option value="مبتدئ">مبتدئ</option>
                 <option value="متوسط">متوسط</option>
+                <option value="ماهر">ماهر</option>
             </select>
             <textarea 
                 placeholder="النص"

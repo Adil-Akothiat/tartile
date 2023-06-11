@@ -7,40 +7,40 @@ const Form = ()=> {
     const [country, setCountry] = useState("");
     const [age, setAge] = useState("");
     const [message, setMessage] = useState("");
-    const [level, setLevel] = useState("");
+    // const [level, setLevel] = useState("");
 
-    const valid = ()=> {
-        let isValid = [];
-        if(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(phone)) {
-            isValid.push({name:"phone", valid: true});
-        }else {
-            isValid.push({name:"phone", valid: false});
-        }
-        if(name.length>=2 && name.length <= 25) {
-            isValid.push({name:"name", valid:true});
-        }else {
-            isValid.push({name:"name", valid:false});
-        }
-        if(country.length>=2 && country.length>=20) {
-            isValid.push({name:"country", valid:true});
-        }else {
-            isValid.push({name:"country", valid:true});
-        }
-        if(+age>=4 && +age<=99) {
-            isValid.push({name:"age", valid:true});
-        }else {
-            isValid.push({name:"age", valid:true});
-        }
-        if(level!=="" || level!=="المستوى") {
-            isValid.push({name:"level", valid:true});
-        }else {
-            isValid.push({name:"level", valid:false});
-        }
-        return isValid;
-    }
+    // const valid = ()=> {
+    //     let isValid = [];
+    //     if(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(phone)) {
+    //         isValid.push({name:"phone", valid: true});
+    //     }else {
+    //         isValid.push({name:"phone", valid: false});
+    //     }
+    //     if(name.length>=2 && name.length <= 25) {
+    //         isValid.push({name:"name", valid:true});
+    //     }else {
+    //         isValid.push({name:"name", valid:false});
+    //     }
+    //     if(country.length>=2 && country.length>=20) {
+    //         isValid.push({name:"country", valid:true});
+    //     }else {
+    //         isValid.push({name:"country", valid:true});
+    //     }
+    //     if(+age>=4 && +age<=99) {
+    //         isValid.push({name:"age", valid:true});
+    //     }else {
+    //         isValid.push({name:"age", valid:true});
+    //     }
+    //     if(level!=="" || level!=="المستوى") {
+    //         isValid.push({name:"level", valid:true});
+    //     }else {
+    //         isValid.push({name:"level", valid:false});
+    //     }
+    //     return isValid;
+    // }
     const sendEmail = (e)=> {
         e.preventDefault();
-        console.log()
+        // console.log()
     }
     return (
         <form onSubmit={sendEmail}>
@@ -92,7 +92,7 @@ const Form = ()=> {
             />
             <select
                 defaultValue="المستوى"
-                onChange={(e) => setLevel(e.target.value)}
+                // onChange={(e) => setLevel(e.target.value)}
             >
                 <option value="">المستوى</option>
                 <option value="مبتدئ">مبتدئ</option>

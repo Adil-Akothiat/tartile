@@ -5,6 +5,7 @@ import Video from "./components/video/video";
 import Features from "./components/features/features";import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Footer from "./components/footer/footer";
+import Contact from "./components/contact/contact";
 
 const Header = lazy(() => import("./components/header/header"));
 const Hadit =  lazy(()=> import("./components/hadit/hadit"));
@@ -26,6 +27,7 @@ const App = () => {
         <Video />
       </div>
       <Features />
+      <Contact />
       <Footer />
     </Suspense>
   );

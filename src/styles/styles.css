@@ -5,6 +5,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    outline-color: #bbf19c;
 }
 :root {
     --main-clr: #6BA549;
@@ -39,6 +40,11 @@ body::-webkit-scrollbar-thumb {
 @media screen and (min-width: 1000px) {
     .main-width {
         width: 90%;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .main-width {
+        width: 1300px;
     }
 }
 .my-grid {

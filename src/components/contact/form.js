@@ -39,8 +39,7 @@ const Form = ()=> {
                 maxLength="2"
                 required
             />
-            <select className="select">
-                <option id="default" value="">المستوى</option>
+            <select>
                 <option value="مبتدئ">مبتدئ</option>
                 <option value="متوسط">متوسط</option>
                 <option value="ماهر">ماهر</option>

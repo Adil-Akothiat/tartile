@@ -58,9 +58,6 @@
 .contact form button[type="submit"]:hover {
     background-color: var(--dark-main-clr);
 }
-.contact form #default:select {
-    color: rgb(118, 118, 118);
-}
 .contact form textarea {
     min-width: 100%;
     max-width: 100%;

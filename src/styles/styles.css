@@ -13,6 +13,7 @@
     --light-bl: #414141;
     --dark-main-clr: #376D18;
     --white-clr: #fff;
+    --danger-clr: #dc3545;
 }
 html {
     scroll-behavior: smooth;

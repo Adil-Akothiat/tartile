@@ -46,7 +46,6 @@
     border: 1px solid var(--main-clr);
     border-radius: 5px;
 }
-
 .contact form button[type="submit"] {
     font-family: "Almarai", sans-serif;
     background-color: var(--main-clr);
@@ -63,4 +62,22 @@
     max-width: 100%;
     min-height: 90px;
     max-height: 90px;
+}
+.contact form .danger {
+    border-color: var(--danger-clr);
+}
+.contact .alert-msg {
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+.contact .alert-success {
+    color: var(--dark-main-clr);
+    background-color: rgb(222, 255, 222);
+}
+.contact .alert-danger {
+    color: var(--danger-clr);
+    background-color: rgb(255, 219, 219);
 }

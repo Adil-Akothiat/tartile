@@ -10,7 +10,7 @@ const Contact = ()=> {
                 data-aos-delay="50"
                 data-aos-duration="1000"
             >
-                <h2 id="contact">تواصل معنا</h2>
+                <h2 id="contact">املأ الاستمارة</h2>
             </div>
             <div 
                 className="contact-content"

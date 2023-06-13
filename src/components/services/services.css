@@ -4,7 +4,7 @@
 .services div {
     display: flex;
     align-items: center;
-    color: var(--main-clr);
+    color: var(--white-clr);
 }
 .services div span {
     font-size: 20px;

@@ -21,9 +21,9 @@ const App = () => {
   return (
     <Suspense fallback={<Loader />}>
       <Header />
-      <Welcom />
-      <Hadit />
       <div className="bg-pr">
+        <Welcom />
+        <Hadit /> 
         <Services />
         <Video />
       </div>

@@ -1,16 +1,11 @@
-.hadit {
-    margin: 2.5em 0;
-}
 .hadit .cover-bg {
-    border: 1mm double var(--main-clr);
-    padding: 40px;
     text-align: center;
 }
 .hadit .hadit-text >div:first-child {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--main-clr);
+    color: var(--white-clr);
     margin-bottom: .5em;
 }
 .hadit .hadit-text span {
@@ -23,7 +18,7 @@
 .hadit .hadit-text p {
     font-size: 18px;
     line-height: 1.8;
-    color: var(--dark-main-clr);
+    color: var(--white-clr);
 }
 @media screen and (min-width: 500px) {
     .hadit .hadit-text p {

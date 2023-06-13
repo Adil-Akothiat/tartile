@@ -46,6 +46,9 @@
     border: 1px solid var(--main-clr);
     border-radius: 5px;
 }
+.contact form select option:checked {
+    background-color: transparent;
+}
 .contact form button[type="submit"] {
     font-family: "Almarai", sans-serif;
     background-color: var(--main-clr);

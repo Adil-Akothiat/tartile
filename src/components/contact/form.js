@@ -29,7 +29,7 @@ const Form = () => {
         if(isValidName(name)&&isValidPhone(phone)&&isValidCountry(country)&&isValidAge(age)&&isValidLevel(level)&&isValidEmail(email)&&isValidMessage&&isValidHizb(hizb)) {
             setName("");setPhone("");setCountry("");setAge("");setEmail("");setMessage("");
             document.querySelector("select").children[0].selected="select";
-            emailjs.sendForm('service_omcqop5', 'template_wuy0ii9', form.current, '-E6qIVI3LXhEbxTrI')
+            emailjs.sendForm('service_0k01nji', 'template_mydbrdy', form.current, 'cb5XW2-B3rgWMovzC')
             .then((result) => {
                 console.log(result.text);
                 setAlert({open: true, valid: true, message:"تم التسجيل بنجاح!"});

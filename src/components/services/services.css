@@ -5,6 +5,8 @@
     display: flex;
     align-items: center;
     color: var(--white-clr);
+    width: fit-content;
+    margin: auto;
 }
 .services div span {
     font-size: 20px;

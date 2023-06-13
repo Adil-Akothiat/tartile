@@ -38,6 +38,7 @@ const Footer = ()=> {
                             href={url}
                             target="_blank"
                             rel="noreferrer"
+                            aria-label={name}
                         >{
                             name==="tiktok"?<BsTiktok />:
                             name==="instagram"?<AiOutlineInstagram />:

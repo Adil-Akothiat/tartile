@@ -9,7 +9,7 @@ const Video = () => {
             data-aos-delay="50"
             data-aos-duration="1000"
         >
-            <video controls width="250" loop>
+            <video controls width="250">
                 <source src={require("../../assets/video/ramadan.mp4")} type="video/mp4" />
             </video>
             <a href="#contact" role="button">

@@ -20,7 +20,7 @@ const App = () => {
   ,[]);
   return (
     <Suspense fallback={<Loader />}>
-      <Header />
+      {/* <Header /> */}
       <div className="bg-pr">
         <Welcom />
         <Hadit /> 

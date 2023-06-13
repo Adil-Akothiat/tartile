@@ -4,9 +4,12 @@ import "./hadit.css";
 const Hadit = ()=> {
     return (
         <div className="hadit">
-            <div className="cover-bg">
+            <div className="cover-bg  main-width">
                 <div 
-                    className="hadit-text main-width"
+                    className="hadit-text"
+                    data-aos="fade-up"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
                 >
                     <div>
                         <span>قال رسول الله</span>

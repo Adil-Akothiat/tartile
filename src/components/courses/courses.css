@@ -1,31 +1,38 @@
 .courses {
-    background-color: #FCF7FF;
-    padding: 1.5em 0;
+    background: linear-gradient(138deg, #D8E7E4, #fff);
+}
+.courses .cr {
+    padding: 2em;
+}
+.courses .cr h3  {
+    font-size: 24px;
+    color: var(--dark-main-clr);
+}
+.courses .cr p {
+    font-size: 16px;
+    text-align: start;
+    margin: 10px 0 40px 0;
+    line-height: 1.8;
+}
+.courses .cr a[role="button"] {
+    color: var(--dark-main-clr);
+    border: 1px solid var(--dark-main-clr);
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: 700;
+    transition: all 300ms linear;
+}
+.courses .cr a[role="button"]:hover {
+    background-color: var(--main-clr);
+    color: var(--white-clr);
 }
 .courses >div {
     margin: 2.5em auto;
 }
-.courses .courses-gr {
-    display: grid;
-    grid-template-columns: 100%;
-    row-gap:  1.8em;
-}
-@media screen and (min-width: 700px) {
-    .courses .courses-gr {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 1.5em;
-    }
-}
-@media screen and (min-width: 1000px) {
-    .courses .courses-gr {
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 1.5em;
-    }
-}
 .courses .courses-gr >div {
-    border-bottom: 1px solid var(--main-clr);
+    border-bottom: 1px solid #e2e2e2;
     padding: 20px 0;
-    text-align: center;
+    margin: 38px 0;
 }
 .courses .courses-gr span {
     color: var(--main-clr);
@@ -38,4 +45,48 @@
     line-height: 1.7;
     color: var(--light-bl);
     font-size: 18px;
+}
+.courses .my-gr img {
+    width: 100%;
+    border-radius: 0 3em 0 3em;
+}
+.courses .my-gr >div:first-child {
+    line-height: 0;
+    overflow: hidden;
+}
+.courses .my-gr >div {
+    width: 80%;
+    margin: auto;
+}
+@media screen and (min-width: 800px) {
+    .courses .cr h3 {
+        font-size: 34px;
+    }   
+    .courses .cr p {
+        font-size: 24px;
+    }
+    .courses .my-gr {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .courses >div {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        align-items: center;
+    }
+    .courses .my-gr {
+        grid-template-columns: 60% 40%;
+    }
+    .courses .cr {
+        padding: 0;
+    }
+    .courses .cr a[role="button"] {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 14px 10px;
+    }
 }

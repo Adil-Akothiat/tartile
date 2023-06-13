@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import validation from "./validation";
+import emailjs from "@emailjs/browser";
 
 const Form = () => {
     const [name, setName] = useState("");
@@ -11,7 +12,7 @@ const Form = () => {
     const [level, setLevel] = useState("");
     const [alert, setAlert] = useState({});
 
-
+    const form = useRef();
     const sendEmail = (e) => {
         e.preventDefault();
         const {
@@ -26,13 +27,22 @@ const Form = () => {
         if(isValidName(name)&&isValidPhone(phone)&&isValidCountry(country)&&isValidAge(age)&&isValidLevel(level)&&isValidEmail(email)&&isValidMessage) {
             setName("");setPhone("");setCountry("");setAge("");setEmail("");setMessage("");
             document.querySelector("select").children[0].selected="select";
-            setAlert({open: true, valid: true, message:"تم التسجيل بنجاح!"});
+            emailjs.sendForm('service_dgfk78p', 'template_wuy0ii9', form.current, '-E6qIVI3LXhEbxTrI')
+            .then((result) => {
+                console.log(result.text);
+                setAlert({open: true, valid: true, message:"تم التسجيل بنجاح!"});
+            }, (error) => {
+                console.log(error.text);
+            });
         }else {
             setAlert({open: true, valid: false, message:"المرجو ملئ الإستمارة بطريقة صحيحة"});
         }
     }
     return (
-        <form onSubmit={sendEmail}>
+        <form 
+            ref={form}
+            onSubmit={sendEmail}   
+        >
             <input
                 type="text"
                 name="name"
@@ -51,7 +61,7 @@ const Form = () => {
             />
             <input
                 type="email"
-                name="mail"
+                name="email"
                 id="mail"
                 placeholder="البريد الالكتروني"
                 value={email}
@@ -130,8 +140,9 @@ const Form = () => {
                 <option value="متوسط">متوسط</option>
                 <option value="ماهر">ماهر</option>
             </select>
+            <input type="text" name="level" value={level} style={{display: "none"}} readOnly/>
             <textarea
-                name="النص"
+                name="message"
                 placeholder="النص"
                 maxLength="250"
                 value={message}

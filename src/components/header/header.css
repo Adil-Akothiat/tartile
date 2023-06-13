@@ -4,6 +4,8 @@ header {
     align-items: center;
     margin-top: .75em;
     margin-bottom: 1.5em;
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom: 20px;
 }
 @media screen and (max-width: 300px) {
     header {

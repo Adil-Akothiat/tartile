@@ -8,7 +8,7 @@ import Footer from "./components/footer/footer";
 import Contact from "./components/contact/contact";
 import Courses from "./components/courses/courses";
 
-const Header = lazy(() => import("./components/header/header"));
+// const Header = lazy(() => import("./components/header/header"));
 const Hadit =  lazy(()=> import("./components/hadit/hadit"));
 const Welcom = lazy(()=> import("./components/welcom/welcom"));
 const Services = lazy(()=> import("./components/services/services"));

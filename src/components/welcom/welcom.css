@@ -8,7 +8,7 @@
     width: fit-content;
     margin: 10px auto 3.5em auto;
 }
-.welcom-tartile h2::after,
+/* .welcom-tartile h2::after,
 .contact h2::after {
     content:"";
     position: absolute;
@@ -19,14 +19,14 @@
     height: 1mm;
     background-color: var(--main-clr);
     transition: width .5s linear;
-}
-.welcom-tartile h2::after {
+} */
+/* .welcom-tartile h2::after {
     background-color: var(--white-clr);
 }
 .welcom-tartile h2:hover::after,
 .contact h2:hover::after {
     width: 100%;
-}
+} */
 .welcom-tartile p {
     font-size: 16px;
     line-height: 1.7;

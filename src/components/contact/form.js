@@ -10,6 +10,7 @@ const Form = () => {
     const [age, setAge] = useState("");
     const [message, setMessage] = useState("");
     const [level, setLevel] = useState("");
+    const [hizb, setHizb] = useState("");
     const [alert, setAlert] = useState({});
 
     const form = useRef();
@@ -22,12 +23,13 @@ const Form = () => {
             isValidAge,
             isValidLevel,
             isValidEmail,
-            isValidMessage
+            isValidMessage,
+            isValidHizb
         } = validation;
-        if(isValidName(name)&&isValidPhone(phone)&&isValidCountry(country)&&isValidAge(age)&&isValidLevel(level)&&isValidEmail(email)&&isValidMessage) {
+        if(isValidName(name)&&isValidPhone(phone)&&isValidCountry(country)&&isValidAge(age)&&isValidLevel(level)&&isValidEmail(email)&&isValidMessage&&isValidHizb(hizb)) {
             setName("");setPhone("");setCountry("");setAge("");setEmail("");setMessage("");
             document.querySelector("select").children[0].selected="select";
-            emailjs.sendForm('service_dgfk78p', 'template_wuy0ii9', form.current, '-E6qIVI3LXhEbxTrI')
+            emailjs.sendForm('service_omcqop5', 'template_wuy0ii9', form.current, '-E6qIVI3LXhEbxTrI')
             .then((result) => {
                 console.log(result.text);
                 setAlert({open: true, valid: true, message:"تم التسجيل بنجاح!"});
@@ -125,7 +127,22 @@ const Form = () => {
                 required
             />
             <select
-                defaultValue="المستوى"
+                onChange={({ target }) => {
+                    setHizb(target.value);
+                    if (validation.isValidHizb(target.value)) {
+                        target.classList.remove("danger");
+                    } else {
+                        target.classList.add("danger");
+                    }
+                }}
+            >
+                <option value="">حزب سبح وعم بالتجويد</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <input type="text" name="hizb" value={hizb} style={{display: "none"}} readOnly/>
+            <select
                 onChange={({ target }) => {
                     setLevel(target.value);
                     if (validation.isValidLevel(target.value)) {

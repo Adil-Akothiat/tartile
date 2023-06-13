@@ -47,6 +47,14 @@ const isValidMessage = (message)=> {
         return false;
     }
 }
+const isValidHizb = (hizb)=> {
+    if(hizb==="") {
+        return false;
+    }else {
+        return true;
+    }
+}
+
 const validation = {
     isValidName,
     isValidPhone,
@@ -54,7 +62,8 @@ const validation = {
     isValidAge,
     isValidLevel,
     isValidEmail,
-    isValidMessage
+    isValidMessage,
+    isValidHizb
 }
 
 export default validation;

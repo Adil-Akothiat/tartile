@@ -127,6 +127,8 @@ const Form = () => {
                 required
             />
             <select
+                onFocus={({target})=> target.firstElementChild.style.display="none"}
+                onBlur={({target})=> target.firstElementChild.style.display="block"}
                 onChange={({ target }) => {
                     setHizb(target.value);
                     if (validation.isValidHizb(target.value)) {
@@ -136,13 +138,24 @@ const Form = () => {
                     }
                 }}
             >
-                <option value="">حزب سبح وعم بالتجويد</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
+                <option value="">اختر الدورة</option>
+                <option value="1">
+                    حزب سبح وعم
+                    1
+                </option>
+                <option value="2">
+                    حزب سبح وعم
+                    2
+                </option>
+                <option value="3">
+                    حزب سبح وعم
+                    3
+                </option>
             </select>
             <input type="text" name="hizb" value={hizb} style={{display: "none"}} readOnly/>
             <select
+                onFocus={({target})=> target.firstElementChild.style.display="none"}
+                onBlur={({target})=> target.firstElementChild.style.display="block"}
                 onChange={({ target }) => {
                     setLevel(target.value);
                     if (validation.isValidLevel(target.value)) {

@@ -151,6 +151,10 @@ const Form = () => {
                     حزب سبح وعم
                     3
                 </option>
+                <option value="4">
+                    حزب سبح وعم
+                    4
+                </option>
             </select>
             <input type="text" name="hizb" value={hizb} style={{display: "none"}} readOnly/>
             <select
